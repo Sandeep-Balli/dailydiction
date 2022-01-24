@@ -79,6 +79,32 @@ body {
     display: block;
 }
 
+.wrapper .info-text {
+    font-size: 13px;
+    color: #9a9a9a;
+    margin: -3px 0 -10px;
+}
+
+.wrapper.active .info-text {
+    display: none;
+}
+
+.info-text span {
+    font-weight: 500;
+}
+
+.wrapper ul {
+   height: 0;
+   opacity: 0;
+   overflow: hidden;
+   transition: all 0.2s ease;
+}
+
+.wrapper.active ul {
+   height: 303px;
+   opacity: 1;
+}
+
 .wrapper ul li {
     display: flex;
     align-items: center;
@@ -86,6 +112,12 @@ body {
     padding-bottom: 17px;
     margin-bottom: 14px;
     border-bottom: 1px solid #ccc;
+}
+
+ul li:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
 }
 
 ul .word p {
@@ -96,4 +128,46 @@ ul .word p {
 ul .word span {
     font-size: 12px;
     color: #989898;
+}
+
+ul .word i {
+    cursor: pointer;
+    font-size: 15px;
+    color: #999;
+}
+
+ul .content {
+    max-height: 215px;
+    overflow-y: auto;
+}
+
+ul .content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.content li .details {
+    padding-left: 10px;
+    border-radius: 4px 0 0 4px;
+    border-left: 3px solid #bfc2f3;
+}
+
+.content li .details p{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.content li .details span {
+    font-size: 15px;
+    color: #7e7e7e;
+}
+
+.synonyms .details .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.synonyms .details .list span {
+    margin-right: 5px;
+    cursor: pointer;
+    text-decoration: underline;
 }
